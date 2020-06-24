@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: coupon-eureka
+
+server:
+  port: 8000
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # indicate if getting the register info from Eureka Server, default value is true
+    # if it is a single node Eureka Server, there is no need to asyc the data from other node， so，set the value to false
+    fetch-registry: false
+    # indicate if registering itself to Eureka Server, default value it true,
+    # because current application is a single node Eureka Server, need to set value to false
+    register-with-eureka: false
+    # set the url of Eureka Serve, search and register service needs to reply on this url
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
