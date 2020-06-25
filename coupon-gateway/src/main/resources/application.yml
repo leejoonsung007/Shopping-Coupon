@@ -9,3 +9,21 @@ eureka:
   client:
     service-url:
       defaultZone: http://server1:8000/eureka/
+
+zuul:
+  routes:
+    prefix: /shopping
+    # coupon template service route setting
+    template:
+      path: /coupon-template/**
+      serviceId: eureka-client-coupon-template
+      strip-prefix: false
+
+  host:
+    connect-timeout-millis: 15000
+    socket-timeout-millis: 60000
+
+# load balancing
+ribbon:
+  ConnectTimeout: 15000
+  ReadTimeout: 15000
