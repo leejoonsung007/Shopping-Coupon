@@ -8,20 +8,17 @@ import com.shopping.coupon.constant.EXPType;
 import com.shopping.coupon.constant.Platform;
 import com.shopping.coupon.vo.TemplateRequest;
 import com.shopping.coupon.vo.TemplateRule;
-import org.apache.commons.lang.time.DateUtils;
+import org.apache.commons.lang3.time.DateUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.swing.*;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 
-@SpringBootTest
-@RunWith(SpringRunner.class)
 public class CreateTemplateServiceTest extends TemplateApplicationTest {
 
     @Autowired
@@ -36,7 +33,7 @@ public class CreateTemplateServiceTest extends TemplateApplicationTest {
 
     private TemplateRequest createFakeTemplateRequest() {
          TemplateRequest request = new TemplateRequest();
-         request.setName("coupontemplate_" + new Date().getTime());
+         request.setName("couponTemplate-" + new Date().getTime());
          request.setLogo("http://www.google.com");
          request.setDescription("coupon template test");
          request.setCategory(CouponCategory.OFF.getCode());

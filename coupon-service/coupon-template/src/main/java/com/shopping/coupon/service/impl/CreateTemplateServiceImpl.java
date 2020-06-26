@@ -31,7 +31,7 @@ public class CreateTemplateServiceImpl implements ICreateTemplateService {
         // Validate request
         if (!request.validate()) {
             //TODO indicate which param is not valid
-            throw new CouponException("BuildTemplate Param Is not Valid");
+            throw new CouponException("Create Template Param Is not Valid");
         }
 
         if (templateDao.findByName(request.getName()) != null) {

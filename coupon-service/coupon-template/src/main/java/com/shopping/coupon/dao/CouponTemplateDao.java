@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface CouponTemplateDao extends JpaRepository<CouponTemplate, Integer> {
 
     // search a coupon template by template name
-    CouponTemplateDao findByName(String templateName);
+    CouponTemplate findByName(String templateName);
 
     // search all templates based on available and expired
     List<CouponTemplate> findAllByAvailableAndExpired(Boolean available, Boolean expired);
