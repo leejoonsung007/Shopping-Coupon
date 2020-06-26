@@ -17,6 +17,7 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
 
     /**
      * determine whether to process the response
+     *
      * @param returnType
      * @param converterType
      * @return true/false
@@ -40,6 +41,7 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
 
     /**
      * Process the data before write it to http response body
+     *
      * @param body
      * @param methodParameter
      * @param selectedContentType
@@ -60,7 +62,7 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
         // if response body is null, no need to set data
         if (body == null) {
             return response;
-        // If we defined the return data type of controller is CommonResponse, no need to precoess it
+            // If we defined the return data type of controller is CommonResponse, no need to precoess it
         } else if (body instanceof CommonResponse) {
             return (CommonResponse<Object>) body;
         } else {

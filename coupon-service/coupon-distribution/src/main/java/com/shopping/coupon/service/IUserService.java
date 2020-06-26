@@ -11,6 +11,7 @@ public interface IUserService {
 
     /**
      * Get coupon info by userId and status
+     *
      * @param userId user id
      * @param status status
      * @return coupon list
@@ -20,6 +21,7 @@ public interface IUserService {
 
     /**
      * Get user available coupon template
+     *
      * @param userId user id
      * @return CouponTemplateSDK
      * @throws CouponException exception
@@ -28,6 +30,7 @@ public interface IUserService {
 
     /**
      * User acquires a coupon
+     *
      * @param request coupon acquire request
      * @return coupon
      * @throws CouponException exception
@@ -36,7 +39,6 @@ public interface IUserService {
 
 
     /**
-     *
      * @param info
      * @return settlement infp
      * @throws CouponException exception

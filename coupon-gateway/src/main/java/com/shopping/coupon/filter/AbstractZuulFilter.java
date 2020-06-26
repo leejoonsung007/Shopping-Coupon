@@ -15,7 +15,7 @@ public abstract class AbstractZuulFilter extends ZuulFilter {
     @Override
     public boolean shouldFilter() {
         RequestContext ctx = RequestContext.getCurrentContext();
-        return (boolean)ctx.getOrDefault(NEXT, true);
+        return (boolean) ctx.getOrDefault(NEXT, true);
     }
 
     @Override

@@ -20,6 +20,7 @@ public enum CouponStatus {
 
     /**
      * get coupon status object by code
+     *
      * @param code code
      * @return coupon status object
      */

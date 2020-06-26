@@ -34,6 +34,7 @@ public class CouponTemplateController {
      * Create coupon template api
      * 127.0.0.1:7001/coupon-template/template/create
      * Access via gateway 127.0.0.1:9000/shopping/coupon-template/template/create
+     *
      * @param request template request object
      * @return coupon
      * @throws CouponException exception
@@ -49,6 +50,7 @@ public class CouponTemplateController {
      * Coupon Template details
      * 127.0.0.1:7001/coupon-template/template/info?id=1
      * Access via gateway 127.0.0.1:9000/shopping/coupon-template/template/info?id=1
+     *
      * @param id coupon template info
      * @return coupon template object
      * @throws CouponException exception
@@ -64,6 +66,7 @@ public class CouponTemplateController {
      * Get all available coupon template
      * 127.0.0.1:7001/coupon-template/template/template/sdk/all
      * Access via gateway 127.0.0.1:9000/shopping/coupon-template/template/template/sdk/all
+     *
      * @return coupon template sdk list
      */
     @GetMapping("/template/sdk/all")
@@ -76,6 +79,7 @@ public class CouponTemplateController {
      * Get the mapping from ids to CouponTemplateSDK
      * 127.0.0.1:7001/coupon-template/template/sdk/all
      * Access via gateway 127.0.0.1:9000/shopping/coupon-template/template/sdk/all
+     *
      * @return map<id, couponTemplateSDK>
      */
     @GetMapping("/template/sdk/infos")

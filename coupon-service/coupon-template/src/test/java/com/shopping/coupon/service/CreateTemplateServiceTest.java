@@ -32,15 +32,15 @@ public class CreateTemplateServiceTest extends TemplateApplicationTest {
     }
 
     private TemplateRequest createFakeTemplateRequest() {
-         TemplateRequest request = new TemplateRequest();
-         request.setName("couponTemplate-" + new Date().getTime());
-         request.setLogo("http://www.google.com");
-         request.setDescription("coupon template test");
-         request.setCategory(CouponCategory.OFF.getCode());
-         request.setPlatform(Platform.PLATFORM_ONE.getCode());
-         request.setCount(10000);
-         request.setUserId(10001L);
-         request.setTarget(DistributionTarget.ACTIVE.getCode());
+        TemplateRequest request = new TemplateRequest();
+        request.setName("couponTemplate-" + new Date().getTime());
+        request.setLogo("http://www.google.com");
+        request.setDescription("coupon template test");
+        request.setCategory(CouponCategory.OFF.getCode());
+        request.setPlatform(Platform.PLATFORM_ONE.getCode());
+        request.setCount(10000);
+        request.setUserId(10001L);
+        request.setTarget(DistributionTarget.ACTIVE.getCode());
 
         TemplateRule rule = new TemplateRule();
         rule.setExpiration(new TemplateRule.Expiration(EXPType.DYNAMIC.getCode(), 1,

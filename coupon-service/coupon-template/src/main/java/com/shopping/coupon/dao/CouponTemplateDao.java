@@ -1,7 +1,9 @@
 package com.shopping.coupon.dao;
 
 import com.shopping.coupon.entity.CouponTemplate;
+
 import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

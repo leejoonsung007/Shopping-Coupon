@@ -23,6 +23,6 @@ public class CouponCategoryConverter implements AttributeConverter<CouponCategor
     // convert database attribute type to entity, search
     @Override
     public CouponCategory convertToEntityAttribute(String code) {
-        return CouponCategory.of(code) ;
+        return CouponCategory.of(code);
     }
 }

@@ -2,12 +2,14 @@ package com.shopping.coupon.service;
 
 import com.shopping.coupon.entity.Coupon;
 import com.shopping.coupon.exception.CouponException;
-import com.sun.tools.javac.util.List;
+
+import java.util.List;
 
 public interface IRedisService {
 
     /**
      * get user coupons based by the status
+     *
      * @param userId user id
      * @param status status
      * @return coupon list
@@ -16,6 +18,7 @@ public interface IRedisService {
 
     /**
      * Avoid cache penetration, save a empty coupon to cache
+     *
      * @param userId user id
      * @param status status
      */
@@ -23,16 +26,18 @@ public interface IRedisService {
 
     /**
      * Try to get a coupon code from cache
+     *
      * @param templateId template Id - primary key
      * @return coupon code
      */
-    String tryToGetCouponCodeFromCache(Integer templateId);
+    String tryToAcquireCouponCodeFromCache(Integer templateId);
 
     /**
      * Save coupon to cache
-     * @param userId user id
+     *
+     * @param userId  user id
      * @param coupons coupon
-     * @param status coupon status
+     * @param status  coupon status
      * @return number of coupons which saves successfully
      * @throws CouponException exception
      */

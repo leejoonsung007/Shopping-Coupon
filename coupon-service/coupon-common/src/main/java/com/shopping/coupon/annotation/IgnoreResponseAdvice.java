@@ -5,6 +5,7 @@ package com.shopping.coupon.annotation;
  * Ignore response pattern annotation
  * can be applied to method/class
  */
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

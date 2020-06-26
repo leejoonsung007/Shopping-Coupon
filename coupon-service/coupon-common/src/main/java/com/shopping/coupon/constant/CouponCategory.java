@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 @Getter
 @AllArgsConstructor
-public enum  CouponCategory {
+public enum CouponCategory {
 
     OFF("$$ OFF Every $$ coupon", "001"),
     DISCOUNT("Discount coupon", "002"),

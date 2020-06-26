@@ -11,10 +11,11 @@ public interface ICreateTemplateService {
 
     /**
      * Create coupon template
+     *
      * @param request template request parameters
      * @return coupon template entity
      * @throws CouponException exception
      */
     CouponTemplate createTemplate(TemplateRequest request)
-        throws CouponException;
+            throws CouponException;
 }

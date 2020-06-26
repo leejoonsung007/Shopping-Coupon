@@ -60,6 +60,7 @@ public class AsyncCreateCouponCodeServiceImpl implements IAsyncCreateCouponCodeS
     /**
      * create a coupon code (18 digits = platform code (3 digits) + category code (1 digit) +
      * time(6 digits = 200101) + random number(8 digits)
+     *
      * @param template template entity
      * @return coupon code set which has the same length as template.count
      */
@@ -80,11 +81,11 @@ public class AsyncCreateCouponCodeServiceImpl implements IAsyncCreateCouponCodeS
         }
 
         // low efficiency due to size check
-        while(result.size() < template.getCount()) {
+        while (result.size() < template.getCount()) {
             result.add(prefix4 + buildCouponCodeSuffix14(date));
         }
 
-        assert  result.size() == template.getCount();
+        assert result.size() == template.getCount();
 
         stopwatch.stop();
         log.info("Build Coupon Code Cose: {}ms", stopwatch.elapsed(TimeUnit.MICROSECONDS));
@@ -94,6 +95,7 @@ public class AsyncCreateCouponCodeServiceImpl implements IAsyncCreateCouponCodeS
 
     /**
      * generated suffix 14 digits of the coupon code
+     *
      * @param date date for coupon creation
      * @return 14 digits of coupon code
      */

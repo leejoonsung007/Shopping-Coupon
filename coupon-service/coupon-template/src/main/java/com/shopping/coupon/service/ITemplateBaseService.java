@@ -15,6 +15,7 @@ public interface ITemplateBaseService {
 
     /**
      * Get coupon template info by id
+     *
      * @param id
      * @return couponTemplate
      * @throws CouponException exception
@@ -23,12 +24,14 @@ public interface ITemplateBaseService {
 
     /**
      * Get all available templates
+     *
      * @return Coupon Template list
      */
     List<CouponTemplateSDK> findAllAvailableTemplates();
 
     /**
      * Get the mapping between ids and CouponTemplateSDK
+     *
      * @param ids
      * @return Map<key: template id, value: CouponTemplateSDK>
      */

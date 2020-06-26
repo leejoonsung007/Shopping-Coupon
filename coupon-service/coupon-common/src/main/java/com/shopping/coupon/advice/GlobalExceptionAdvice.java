@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 public class GlobalExceptionAdvice {
 
     /**
-     *  handle CouponException
-     * */
+     * handle CouponException
+     */
     @ExceptionHandler(value = CouponException.class)
     public CommonResponse<String> handlerCouponException(HttpServletRequest httpServletRequest,
                                                          CouponException ex) {

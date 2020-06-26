@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 @Slf4j
 @Component
 @SuppressWarnings("all")
-public class TrafficLimiterFilter extends AbstractPreZulFilter{
+public class TrafficLimiterFilter extends AbstractPreZulFilter {
 
     RateLimiter rateLimiter = RateLimiter.create(2.0);
 

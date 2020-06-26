@@ -31,6 +31,7 @@ public class HealthCheck {
     /**
      * Service health check API
      * 127.0.0.1:7001/coupon-template/health
+     *
      * @return string
      */
     @GetMapping("/health")
@@ -42,6 +43,7 @@ public class HealthCheck {
     /**
      * Exception check API
      * 127.0.0.1:7001/coupon-template/exception
+     *
      * @return string
      */
     @GetMapping("/exception")
@@ -54,6 +56,7 @@ public class HealthCheck {
     /**
      * Eureka Server microservices info
      * 127.0.0.1:7001/coupon-template/exception
+     *
      * @return string
      */
     @GetMapping("/info")

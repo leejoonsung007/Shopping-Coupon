@@ -12,6 +12,7 @@ public interface CouponDao extends JpaRepository<Coupon, Integer> {
 
     /**
      * Find coupon by userId ans coupon status
+     *
      * @param userId userId
      * @param status status
      * @return coupon list
