@@ -1,9 +1,10 @@
 package com.shopping.coupon.vo;
 
-import com.sun.tools.javac.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 /**
  * checkout info
@@ -15,7 +16,7 @@ public class SettlementInfo {
 
     private Long userId;
 
-    private List<ProductInfo> productInfoList;
+    private List<ProductInfo> productInfos;
 
     private List<CouponAndTemplateInfo> couponAndTemplateInfos;
 
