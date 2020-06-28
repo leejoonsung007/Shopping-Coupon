@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: eureka-client-coupon-template
+    name: eureka-client-coupon-distribution
   jpa:
     show-sql: true
     hibernate:

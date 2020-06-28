@@ -18,7 +18,7 @@ public class TemplateRule {
 
     private Discount discount;
 
-    // the number of coupon each person can receive
+    // the number of coupon each person can acquire
     private Integer limitation;
 
     private Usage usage;

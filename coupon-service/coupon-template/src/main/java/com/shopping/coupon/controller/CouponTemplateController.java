@@ -70,7 +70,7 @@ public class CouponTemplateController {
      * @return coupon template sdk list
      */
     @GetMapping("/template/sdk/all")
-    public List<CouponTemplateSDK> findCouponTemplateInfo() {
+    public List<CouponTemplateSDK> findAllAvailableTemplateInfo() {
         log.info("Find all available template");
         return templateBaseService.findAllAvailableTemplates();
     }

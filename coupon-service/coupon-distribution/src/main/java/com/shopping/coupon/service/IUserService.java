@@ -5,7 +5,8 @@ import com.shopping.coupon.exception.CouponException;
 import com.shopping.coupon.vo.AcquireTemplateRequest;
 import com.shopping.coupon.vo.CouponTemplateSDK;
 import com.shopping.coupon.vo.SettlementInfo;
-import com.sun.tools.javac.util.List;
+
+import java.util.List;
 
 public interface IUserService {
 
@@ -17,7 +18,7 @@ public interface IUserService {
      * @return coupon list
      * @throws CouponException exception
      */
-    List<Coupon> findCouponByStatus(Long userId, Integer status) throws CouponException;
+    List<Coupon> findUserOwnCouponByStatus(Long userId, Integer status) throws CouponException;
 
     /**
      * Get user available coupon template
@@ -29,13 +30,13 @@ public interface IUserService {
     List<CouponTemplateSDK> findAvailableCouponTemplate(Long userId) throws CouponException;
 
     /**
-     * User acquires a coupon
+     * User collects a coupon
      *
      * @param request coupon acquire request
      * @return coupon
      * @throws CouponException exception
      */
-    Coupon acquireTemplate(AcquireTemplateRequest request) throws CouponException;
+    Coupon collectCoupon(AcquireTemplateRequest request) throws CouponException;
 
 
     /**

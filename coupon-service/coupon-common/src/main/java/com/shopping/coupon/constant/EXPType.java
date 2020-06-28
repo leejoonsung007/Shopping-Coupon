@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 @AllArgsConstructor
 public enum EXPType {
 
-    REGULAR("Fixed EXP type", 1),
+    FIXED("Fixed EXP type", 1),
     DYNAMIC("Dynamic EXP type, starts from receiving the coupon", 2);
 
     private String description;

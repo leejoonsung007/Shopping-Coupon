@@ -17,11 +17,11 @@ public class SettlementInfo {
 
     private List<ProductInfo> productInfoList;
 
-    private List<CouponAndTemplateInfo> couponAndTemplateInfoList;
+    private List<CouponAndTemplateInfo> couponAndTemplateInfos;
 
     private Double cost;
 
-    private boolean paid;
+    private Boolean paid;
 
     @Data
     @NoArgsConstructor

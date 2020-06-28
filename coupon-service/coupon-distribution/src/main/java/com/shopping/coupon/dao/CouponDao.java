@@ -2,8 +2,9 @@ package com.shopping.coupon.dao;
 
 import com.shopping.coupon.constant.CouponStatus;
 import com.shopping.coupon.entity.Coupon;
-import com.sun.tools.javac.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
 
 /**
  * JpaRepository(Classname, primary key type)
