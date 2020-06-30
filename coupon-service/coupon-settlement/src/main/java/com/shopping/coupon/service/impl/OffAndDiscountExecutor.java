@@ -77,7 +77,7 @@ public class OffAndDiscountExecutor extends AbstractExecutor implements RuleExec
         assert discount != null;
 
         if (!canCouponsUseTogether(off, discount)) {
-            log.debug("Current stacked coupon can be used");
+            log.debug("Current stacked coupon canot be used");
             settlement.setCost(itemsTotalPrice);
             // remove stacked coupon
             settlement.setCouponAndTemplateInfos(Collections.emptyList());
@@ -118,8 +118,8 @@ public class OffAndDiscountExecutor extends AbstractExecutor implements RuleExec
      */
     private boolean canCouponsUseTogether(SettlementInfo.CouponAndTemplateInfo off,
                                           SettlementInfo.CouponAndTemplateInfo discount) {
-        String offKey = off.getTemplate().getKey() + String.format("%4d", off.getTemplate().getId());
-        String discountKey = discount.getTemplate().getKey() + String.format("%4d", discount.getTemplate().getId());
+        String offKey = off.getTemplate().getKey() + String.format("%04d", off.getTemplate().getId());
+        String discountKey = discount.getTemplate().getKey() + String.format("%04d", discount.getTemplate().getId());
 
         List<String> canUseTogetherKeysForOff = new ArrayList<>();
         canUseTogetherKeysForOff.add(offKey);
